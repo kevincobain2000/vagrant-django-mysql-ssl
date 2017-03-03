@@ -25,7 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, inline: "echo Installing pip Requirements"
   config.vm.provision :shell, inline: "sudo pip install -r /vagrant/requirements.txt"
-  config.vm.provision :shell, inline: "sudo python /vagrant/myproject/manage.py migrate"
+  config.vm.provision :shell, inline: "/vagrant/myproject/database.sh"
   config.vm.provision :shell, inline: "/vagrant/myproject/server.sh"
   config.vm.provision :shell, inline: "echo Starting Server"
   config.vm.provision :shell, inline: "echo Good job, now enjoy your new vbox: https://192.168.36.12 or https://myproject.me"
