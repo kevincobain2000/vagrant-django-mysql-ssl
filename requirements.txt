@@ -1,2 +1,4 @@
 Django>=1.9
 django-sslserver>=0.12
+djangorestframework==3.5.4
+drfdocs==0.0.11
