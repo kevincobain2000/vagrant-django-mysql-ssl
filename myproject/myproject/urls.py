@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls import include
+
+from V1.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^v1/$', index),
+    url(r'^docs/', include('rest_framework_docs.urls')),
 ]
